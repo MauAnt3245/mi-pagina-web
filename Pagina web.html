@@ -1,0 +1,219 @@
+<html>
+
+<img src="https://economiavirtual.net/wp-content/uploads/2021/01/Inversion-1024x576.jpg">
+
+<div id="contador"></div>
+
+<script>
+// Función para actualizar el contador
+function actualizarContador() {
+  // Obtener la fecha y hora actual
+  var ahora = new Date().getTime();
+  
+  // Definir la fecha y hora de reinicio (dentro de 24 horas)
+  var reinicio = new Date();
+  reinicio.setDate(reinicio.getDate() + 1); // Añadir un día
+  reinicio.setHours(0, 0, 0, 0); // Establecer a medianoche
+  
+  // Calcular la diferencia entre la hora actual y la de reinicio
+  var diferencia = reinicio.getTime() - ahora;
+  
+  // Calcular las horas, minutos y segundos restantes
+  var horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+  var segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+  
+  // Mostrar el contador en el elemento con id "contador"
+  document.getElementById("contador").innerHTML = "Tiempo restante del dia: " + horas + "h " + minutos + "m " + segundos + "s ";
+  
+  // Actualizar el contador cada segundo
+  setTimeout(actualizarContador, 1000);
+}
+
+// Llamar a la función para iniciar el contador
+actualizarContador();
+</script>
+
+</body>
+
+    <h1>Inversiones Financieras</h1>
+    <p>En el contexto empresarial, la inversión es el acto mediante el cual se usan ciertos bienes con el ánimo de obtener unos ingresos o rentas a lo largo del tiempo. La inversión se refiere al empleo de un capital en algún tipo de actividad económica o negocio, con el objetivo de incrementarlo. Dicho de otra manera, consiste en renunciar a un consumo actual y cierto, a cambio de obtener unos beneficios futuros y distribuidos en el tiempo.<br​>
+
+Desde una consideración amplia, la inversión es toda materialización de medios financieros en bienes que van a ser utilizados en un proceso productivo de una empresa o unidad económica, y comprendería la adquisición tanto de bienes de equipo, como de materias primas, servicios etc. Desde un punto de vista más estricto, la inversión comprendería solo los desembolsos de recursos financieros destinados a la adquisición de instrumentos de producción, que la empresa va a utilizar durante varios periodos económicos.
+
+<br​> En el caso particular de la inversión financiera, los recursos se colocan en títulos, valores y demás documentos financieros, a cargo de otros entes, con el objeto de aumentar los excedentes disponibles por medio de la percepción de rendimientos, intereses, dividendos, variaciones de mercado u otros conceptos.
+
+Para el análisis económico de una inversión puede reducirse la misma a las corrientes de pagos e ingresos que origina, considerado cada uno en el momento preciso en que se produce.</p>
+
+
+<style>
+table {
+width: 80%;         
+border-collapse: collapse;
+margin-botqatom: 20px;
+ }
+th, td {
+border: 1px solid #ddd;
+padding: 15px; 
+text-align: left;
+}
+th {
+background-color: #f2f2f2;
+}
+</style>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>¿Qué significa invertir dinero?</h1>
+    <p>Invertir dinero significa utilizar parte de tus recursos financieros para adquirir activos con el objetivo de generar ingresos o aumentar tu patrimonio a largo plazo. Algunas formas comunes de invertir incluyen:</p>
+    <ul>
+        <li>Comprar acciones en el mercado de valores.</li>
+        <li>Adquirir bonos del gobierno o de empresas.</li>
+        <li>Comprar bienes raíces para alquilar o vender en el futuro.</li>
+        <li>Participar en fondos de inversión o fondos de pensiones.</li>
+        <li>Invertir en negocios a través de capital de riesgo o financiación colectiva.</li>
+    </ul>
+    <p>Básicamente se trata de no consumir en el corto plazo los ahorros o patrimonios que tenemos, sino ponerlos a trabajar para que nos produzcan más beneficios a lo largo del tiempo.
+Esto puede hacerse a través de la compra de objetos físicos que se revalorizan, materias primas, bienes raíces, criptomonedas, o inversiones relacionadas con la compra de acciones, fondos de inversión o Exchange-Traded Fund (ETFs). 
+De esta manera hacemos rendir nuestro dinero y logramos libertad financiera sin hipotecar nuestro tiempo. 
+Invertir conlleva riesgos y es importante investigar y entender las diferentes opciones de inversión antes de tomar decisiones financieras. Sin embargo, invertir sabiamente puede ayudarte a alcanzar tus metas financieras a largo plazo y a aumentar tu seguridad financiera.</p>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .video-container {
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            max-width: 600px;
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="stockChart"></canvas>
+
+    <script>
+        // Datos de ejemplo de acciones
+        var stockData = {
+            labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+            datasets: [{
+                label: 'Empresa A',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                data: [100, 110, 105, 48, 115, 125, 130, 135, 130, 140, 145, 150]
+            }, {
+                label: 'Empresa B',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+                data: [90, 95, 100, 180, 80, 115, 120, 125, 130, 135, 140, 180]
+            }]
+        };
+
+        // Configuración del gráfico
+        var chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    stacked: true
+                },
+                y: {
+                    stacked: true
+                }
+            }
+        };
+
+        // Obtener el contexto del canvas
+        var ctx = document.getElementById('stockChart').getContext('2d');
+
+        // Crear el gráfico de acciones
+        var stockChart = new Chart(ctx, {
+            type: 'line',
+            data: stockData,
+            options: chartOptions
+        });
+    </script>
+</body>
+
+
+<p> La tabla de datos estática proporciona un ejemplo ficticio de datos de acciones para dos empresas ("Empresa A" y "Empresa B") A lo largo de los meses del año. Cada fila representa un mes, y cada columna contiene el precio de las acciones para cada empresa en ese mes. </p>
+
+<body>
+    <div class="container">
+        <h1>Información sobre Inversiones Financieras</h1>
+        
+        <div class="inversion">
+            <h2>Acciones</h2>
+            <p>Las acciones representan la propiedad parcial de una empresa. Los inversores pueden comprar y vender acciones en el mercado de valores.</p>
+        </div>
+        
+        <div class="inversion">
+            <h2>Bonos</h2>
+            <p>Los bonos son deuda emitida por gobiernos o empresas. Los inversores prestan dinero a cambio de pagos de intereses periódicos y la devolución del capital en el futuro.</p>
+        </div>
+        
+        <div class="inversion">
+            <h2>Fondos Mutuos</h2>
+            <p>Los fondos mutuos son pools de dinero gestionados profesionalmente que invierten en una variedad de activos, como acciones, bonos y otros instrumentos financieros.</p>
+        </div>
+        
+        <div class="inversion">
+            <h2>ETFs (Fondos Cotizados en Bolsa)</h2>
+            <p>Los ETFs son similares a los fondos mutuos, pero se negocian en bolsas de valores como una acción. Ofrecen diversificación y liquidez a los inversores.</p>
+        </div>
+    </div>
+</body>
+
+<body>
+<h1><br> <br> Reglas de oro en la inversion </h1>
+            <p>Los criterios de inversión son las reglas a través de las cuales un inversor basa sus decisiones de inversión.<br> Aunque no existe una teoría perfecta sobre la hoja de ruta para realizar una inversión rentable, existen métodos de análisis que permiten evaluar la viabilidad de una inversión.<br> Aquí tienes algunos de los criterios más importantes a considerar:</p>
+</body>
+
+<table>
+    <tr>
+        <th>Regla</th>
+        <th>Descripción</th>
+    </tr>   
+    <tr>
+        <td>1. PLANIFICA TU INVERSIÓN</a></td>
+        <td>Antes de empezar a invertir, es importante que planifiques tu inversión: <br> Esto significa establecer una estrategia a largo plazo, establecer objetivos, estudiar el mercado financiero y entender los riesgos. <br> Esto te ayudará a invertir de forma inteligente y a tomar decisiones informadas.</td>
+   </tr>
+    <tr>
+        <td>2. ESTUDIA EL MERCADO</a></td>
+        <td>Es importante que estudies el mercado antes de comenzar a invertir:<br> Esto significa conocer los movimientos de los precios, los factores macroeconómicos que afectan el mercado, el impacto de los eventos mundiales y las tendencias. Esto te ayudará a tomar decisiones informadas</td>
+   </tr>
+    <tr>
+        <td>3. APRENDE A GESTIONAR EL RIESGO</a></td>
+        <td>Es importante que aprendas a gestionar el riesgo cuando inviertes:<br> Esto significa entender los diferentes tipos de riesgo, los instrumentos financieros para gestionar el riesgo, la diversificación y la administración del dinero. Esto te ayudará a limitar las pérdidas y a maximizar los retornos.</td>
+   </tr>
+    <tr>
+        <td>4. UTILIZA LA ANÁLISIS TÉCNICO</a></td>
+        <td>La análisis técnico es una herramienta útil para los inversores:<br> Esta herramienta te ayuda a identificar patrones de precios, identificar niveles de soporte y resistencia, identificar señales de compra y venta y predecir los movimientos futuros del mercado. Esto te ayudará a tomar decisiones informadas.</td>
+   </tr>
+</table>
+
+<body>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Vg4CL6GmvrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>
